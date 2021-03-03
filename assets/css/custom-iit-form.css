@@ -1,0 +1,50 @@
+
+html , body{
+  height:100%;
+  font-family: 'Sarabun', sans-serif;
+  font-size: 16px;
+  /* background-image: url(../../assets/images/bg-dot-opac50.png);
+  background-position: center top;
+  background-repeat: repeat-y;
+  background-size: cover; */
+
+ }
+
+.form-row{
+  margin-bottom: 10px;
+  margin-top: 10px;
+}
+
+.section-box{
+  margin-top: 10px;
+}
+
+.error-box{
+  color:red;
+}
+
+.custom-error{
+  color:red;
+}
+
+.qs-bg{
+    background-color: #fff;
+
+}
+
+.custom-form-caption{
+  font-weight: bold;
+}
+
+.col-bg-gray{
+  background-color: #f5f5f594;
+}
+
+.main-topic{
+  font-weight:bold;
+}
+
+.remark-title{
+  color: orange;
+  font-style: italic;
+}
