@@ -40,13 +40,16 @@
         </div>
     </div>
 
-    <div class="row mt-3">
-      <div class="col-md-12">
-        <div id="flipdown" class="flipdown"></div>
-      </div>
+    <div class="row">
+          <div class="col-sm-12 text-right">
+            <span class="badge badge-info">ยินดีต้อนรับ : คุณ<?= $auth['displayname']; ?></span>
+          </div>
     </div>
 
+
       <form id="FormIIT"  action="<?php echo base_url('internal/store'); ?>" method="post" accept-charset="utf-8" >
+
+
 
         <!-- ส่วนที่ 1  -->
         <div class="row mt-3">
@@ -55,14 +58,14 @@
           </div>
         </div>
 
-
+      <!-- Begin:>> I1 -->
         <div class="form-row is-stop">
           <div class="table-responsive">
 
             <table class="table">
               <thead>
                 <tr >
-                  <th class="text-center align-middle" rowspan="2" >ประเด็นการประเมิน</th>
+                  <th class="text-center align-middle col-bg-gray" rowspan="2" >ประเด็นการประเมิน</th>
                   <th class="text-center align-middle col-bg-gray" colspan="4">ระดับ</th>
                 </tr>
 
@@ -74,9 +77,9 @@
                 </tr>
               </thead>
               <tbody>
-                  <!-- Begin:>> I1 -->
+
                       <tr>
-                        <td colspan="5" class="main-topic">I1 บุคลากรในหน่วยงานของท่าน ปฏิบัติงาน/ให้บริการแก่ผู้มาติดต่อ ตามประเด็นดังต่อไปนี้ มากน้อยเพียงใด </td>
+                        <td colspan="5" >I1 บุคลากรในหน่วยงานของท่าน ปฏิบัติงาน/ให้บริการแก่ผู้มาติดต่อ ตามประเด็นดังต่อไปนี้ มากน้อยเพียงใด </td>
                       </tr>
 
                       <tr>
@@ -134,11 +137,36 @@
                           </div>
                         </td>
                       </tr>
-                  <!-- End:>> I1 -->
 
-                  <!-- Begin:>> I2 -->
+              </tbody>
+            </table>
+          </div> <!-- /.table-responsive -->
+        </div>  <!-- /.form-row -->
+      <!-- End:>> I1 -->
+
+      <!-- Begin:>> I2 -->
+        <div class="form-row is-stop">
+          <div class="table-responsive">
+
+            <table class="table">
+              <thead>
+                <tr >
+                  <th class="text-center align-middle col-bg-gray" rowspan="2" >ประเด็นการประเมิน</th>
+                  <th class="text-center align-middle col-bg-gray" colspan="4">ระดับ</th>
+                </tr>
+
+                <tr >
+                  <th class="text-center align-middle col-bg-gray" style="width:8%" >น้อยที่สุดหรือไม่มีเลย</th>
+                  <th class="text-center align-middle" style="width:8%" >น้อย</th>
+                  <th class="text-center align-middle col-bg-gray" style="width:8%" >มาก</th>
+                  <th class="text-center align-middle" style="width:8%" >มากที่สุด</th>
+                </tr>
+              </thead>
+              <tbody>
+
+
                       <tr>
-                        <td class="main-topic">I2 บุคลากรในหน่วยงานของท่าน ปฏิบัติงาน/ให้บริการ แก่ผู้มาติดต่อทั่ว ๆ ไป กับผู้มาติดต่อที่รู้จักเป็นการส่วนตัวอย่างเท่าเทียมกัน มากน้อยเพียงใด <span id="ans_i201_Error" ></span></td>
+                        <td >I2 บุคลากรในหน่วยงานของท่าน ปฏิบัติงาน/ให้บริการ แก่ผู้มาติดต่อทั่ว ๆ ไป กับผู้มาติดต่อที่รู้จักเป็นการส่วนตัวอย่างเท่าเทียมกัน มากน้อยเพียงใด <span id="ans_i201_Error" ></span></td>
                         <td class="align-middle col-bg-gray">
                           <div class="custom-control custom-radio ml-2">
                             <input type="radio" name="ans_i201" id="ans_i201_id1" class="custom-control-input" data-error="#ans_i201_Error" value="0" />
@@ -164,11 +192,36 @@
                           </div>
                         </td>
                       </tr>
-                  <!-- End:>> I2 -->
 
-                  <!-- Begin:>> I3 -->
+              </tbody>
+            </table>
+
+          </div> <!-- /.table-responsive -->
+        </div>  <!-- /.form-row -->
+      <!-- End:>> I2 -->
+
+      <!-- Begin:>> I3 -->
+        <div class="form-row is-stop">
+          <div class="table-responsive">
+
+            <table class="table">
+              <thead>
+                <tr >
+                  <th class="text-center align-middle col-bg-gray" rowspan="2" >ประเด็นการประเมิน</th>
+                  <th class="text-center align-middle col-bg-gray" colspan="4">ระดับ</th>
+                </tr>
+
+                <tr >
+                  <th class="text-center align-middle col-bg-gray" style="width:8%" >น้อยที่สุดหรือไม่มีเลย</th>
+                  <th class="text-center align-middle" style="width:8%" >น้อย</th>
+                  <th class="text-center align-middle col-bg-gray" style="width:8%" >มาก</th>
+                  <th class="text-center align-middle" style="width:8%" >มากที่สุด</th>
+                </tr>
+              </thead>
+              <tbody>
+
                       <tr>
-                        <td colspan="5" class="main-topic">I3 บุคลากรในหน่วยงานของท่าน มีพฤติกรรมในการปฏิบัติงาน ตามประเด็นดังต่อไปนี้ อย่างไร</td>
+                        <td colspan="5" >I3 บุคลากรในหน่วยงานของท่าน มีพฤติกรรมในการปฏิบัติงาน ตามประเด็นดังต่อไปนี้ อย่างไร</td>
                       </tr>
 
                       <tr>
@@ -254,23 +307,21 @@
                           </div>
                         </td>
                       </tr>
-                  <!-- End:>> I3 -->
-
-
               </tbody>
             </table>
 
           </div> <!-- /.table-responsive -->
         </div>  <!-- /.form-row -->
+      <!-- End:>> I3 -->
 
-
+      <!-- Begin:>> I4 -->
         <div class="form-row is-stop">
           <div class="table-responsive">
 
             <table class="table">
               <thead>
                 <tr >
-                  <th class="text-center align-middle" rowspan="2" >ประเด็นการประเมิน</th>
+                  <th class="text-center align-middle col-bg-gray" rowspan="2" >ประเด็นการประเมิน</th>
                   <th class="text-center align-middle col-bg-gray" colspan="2">ระดับ</th>
                 </tr>
 
@@ -280,9 +331,9 @@
                 </tr>
               </thead>
               <tbody>
-                  <!-- Begin:>> I4 -->
+
                       <tr>
-                        <td colspan="5" class="main-topic">I4 บุคลากรในหน่วยงานของท่าน มีการเรียกรับสิ่งดังต่อไปนี้ จากผู้มาติดต่อ  เพื่อแลกกับการปฏิบัติงาน การอนุมัติ อนุญาต หรือให้บริการ หรือไม่ </td>
+                        <td colspan="5" >I4 บุคลากรในหน่วยงานของท่าน มีการเรียกรับสิ่งดังต่อไปนี้ จากผู้มาติดต่อ  เพื่อแลกกับการปฏิบัติงาน การอนุมัติ อนุญาต หรือให้บริการ หรือไม่ </td>
                       </tr>
 
                       <tr>
@@ -338,11 +389,32 @@
                       <tr>
                         <td colspan="3" class="remark-title">หมายเหตุ: เป็นการเรียกรับที่นอกเหนือจากที่กฎหมายกำหนดให้รับได้ เช่น ค่าธรรมเนียม ค่าบริการ ค่าปรับ เป็นต้น</td>
                       </tr>
-                  <!-- End:>> I4 -->
+              </tbody>
+            </table>
 
-                  <!-- Begin:>> I5 -->
+          </div> <!-- /.table-responsive -->
+        </div>  <!-- /.form-row -->
+      <!-- End:>> I4 -->
+
+      <!-- Begin:>> I5 -->
+        <div class="form-row is-stop">
+          <div class="table-responsive">
+
+            <table class="table">
+              <thead>
+                <tr >
+                  <th class="text-center align-middle col-bg-gray" rowspan="2" >ประเด็นการประเมิน</th>
+                  <th class="text-center align-middle col-bg-gray" colspan="2">ระดับ</th>
+                </tr>
+
+                <tr >
+                  <th class="text-center align-middle col-bg-gray" style="width:8%" >มี</th>
+                  <th class="text-center align-middle" style="width:8%" >ไม่มี</th>
+                </tr>
+              </thead>
+              <tbody>
                       <tr>
-                        <td colspan="5" class="main-topic">I5 นอกเหนือจากการรับจากญาติหรือจากบุคคล ที่ให้กันในโอกาสต่าง ๆ โดยปกติตามขนบธรรมเนียม ประเพณี หรือวัฒนธรรม หรือให้กันตามมารยาทที่ปฏิบัติกันในสังคมแล้ว บุคลากรในหน่วยงานของท่าน มีการรับสิ่งดังต่อไปนี้ หรือไม่</td>
+                        <td colspan="5" >I5 นอกเหนือจากการรับจากญาติหรือจากบุคคล ที่ให้กันในโอกาสต่าง ๆ โดยปกติตามขนบธรรมเนียม ประเพณี หรือวัฒนธรรม หรือให้กันตามมารยาทที่ปฏิบัติกันในสังคมแล้ว บุคลากรในหน่วยงานของท่าน มีการรับสิ่งดังต่อไปนี้ หรือไม่</td>
                       </tr>
 
                       <tr>
@@ -395,11 +467,33 @@
                         </td>
 
                       </tr>
-                  <!-- End:>> I5 -->
+              </tbody>
+            </table>
 
-                  <!-- Begin:>> I6 -->
+          </div> <!-- /.table-responsive -->
+        </div>  <!-- /.form-row -->
+      <!-- End:>> I5 -->
+
+      <!-- Begin:>> I6 -->
+        <div class="form-row is-stop">
+          <div class="table-responsive">
+
+            <table class="table">
+              <thead>
+                <tr >
+                  <th class="text-center align-middle col-bg-gray" rowspan="2" >ประเด็นการประเมิน</th>
+                  <th class="text-center align-middle col-bg-gray" colspan="2">ระดับ</th>
+                </tr>
+
+                <tr >
+                  <th class="text-center align-middle col-bg-gray" style="width:8%" >มี</th>
+                  <th class="text-center align-middle" style="width:8%" >ไม่มี</th>
+                </tr>
+              </thead>
+              <tbody>
+
                       <tr>
-                        <td colspan="5" class="main-topic">I6 บุคลากรในหน่วยงานของท่าน มีการให้สิ่งดังต่อไปนี้ แก่บุคคลภายนอกหรือภาคเอกชน เพื่อสร้างความสัมพันธ์ที่ดีและคาดหวังให้มีการตอบแทนในอนาคต หรือไม่</td>
+                        <td colspan="5" >I6 บุคลากรในหน่วยงานของท่าน มีการให้สิ่งดังต่อไปนี้ แก่บุคคลภายนอกหรือภาคเอกชน เพื่อสร้างความสัมพันธ์ที่ดีและคาดหวังให้มีการตอบแทนในอนาคต หรือไม่</td>
                       </tr>
 
                       <tr>
@@ -452,13 +546,14 @@
                         </td>
 
                       </tr>
-                  <!-- End:>> I6 -->
+
 
               </tbody>
             </table>
 
           </div> <!-- /.table-responsive -->
         </div>  <!-- /.form-row -->
+      <!-- End:>> I6 -->
 
         <!-- ส่วนที่ 2  -->
         <div class="row mt-3">
@@ -467,14 +562,14 @@
           </div>
         </div>
 
-
+      <!-- Begin:>> I7 -->
         <div class="form-row is-stop">
           <div class="table-responsive">
 
             <table class="table">
               <thead>
                 <tr >
-                  <th class="text-center align-middle" rowspan="2" >ประเด็นการประเมิน</th>
+                  <th class="text-center align-middle col-bg-gray" rowspan="2" >ประเด็นการประเมิน</th>
                   <th class="text-center align-middle col-bg-gray" colspan="4">ระดับ</th>
                 </tr>
 
@@ -486,10 +581,10 @@
                 </tr>
               </thead>
               <tbody>
-                  <!-- Begin:>> I7 -->
+
 
                       <tr>
-                        <td class="main-topic">I7 ท่านรู้เกี่ยวกับแผนการใช้จ่ายงบประมาณประจำปี  ของหน่วยงานของท่าน มากน้อยเพียงใด <span id="ans_i701_Error" ></span></td>
+                        <td >I7 ท่านรู้เกี่ยวกับแผนการใช้จ่ายงบประมาณประจำปี  ของหน่วยงานของท่าน มากน้อยเพียงใด <span id="ans_i701_Error" ></span></td>
                         <td class="align-middle col-bg-gray">
                           <div class="custom-control custom-radio ml-2">
                             <input type="radio" name="ans_i701" id="ans_i701_id1" class="custom-control-input" data-error="#ans_i701_Error" value="0" />
@@ -516,11 +611,37 @@
                         </td>
                       </tr>
 
-                  <!-- End:>> I7 -->
 
-                  <!-- Begin:>> I8 -->
+              </tbody>
+            </table>
+
+          </div> <!-- /.table-responsive -->
+        </div>  <!-- /.form-row -->
+      <!-- End:>> I7 -->
+
+
+      <!-- Begin:>> I8 -->
+        <div class="form-row is-stop">
+          <div class="table-responsive">
+
+            <table class="table">
+              <thead>
+                <tr >
+                  <th class="text-center align-middle col-bg-gray" rowspan="2" >ประเด็นการประเมิน</th>
+                  <th class="text-center align-middle col-bg-gray" colspan="4">ระดับ</th>
+                </tr>
+
+                <tr >
+                  <th class="text-center align-middle col-bg-gray" style="width:8%" >น้อยที่สุดหรือไม่มีเลย</th>
+                  <th class="text-center align-middle" style="width:8%" >น้อย</th>
+                  <th class="text-center align-middle col-bg-gray" style="width:8%" >มาก</th>
+                  <th class="text-center align-middle" style="width:8%" >มากที่สุด</th>
+                </tr>
+              </thead>
+              <tbody>
+
                       <tr>
-                        <td colspan="5" class="main-topic">I8 หน่วยงานของท่าน ใช้จ่ายงบประมาณ โดยคำนึงถึงประเด็นดังต่อไปนี้ มากน้อยเพียงใด</td>
+                        <td colspan="5" >I8 หน่วยงานของท่าน ใช้จ่ายงบประมาณ โดยคำนึงถึงประเด็นดังต่อไปนี้ มากน้อยเพียงใด</td>
                       </tr>
                       <tr>
                         <td>&nbsp;- คุ้มค่า <span id="ans_i801_Error" ></span></td>
@@ -576,12 +697,35 @@
                           </div>
                         </td>
                       </tr>
+              </tbody>
+            </table>
 
-                  <!-- Begin:>> I8 -->
+          </div> <!-- /.table-responsive -->
+        </div>  <!-- /.form-row -->
+      <!-- Begin:>> I8 -->
 
-                  <!-- Begin:>> I9 -->
+      <!-- Begin:>> I9 -->
+        <div class="form-row is-stop">
+          <div class="table-responsive">
+
+            <table class="table">
+              <thead>
+                <tr >
+                  <th class="text-center align-middle col-bg-gray" rowspan="2" >ประเด็นการประเมิน</th>
+                  <th class="text-center align-middle col-bg-gray" colspan="4">ระดับ</th>
+                </tr>
+
+                <tr >
+                  <th class="text-center align-middle col-bg-gray" style="width:8%" >น้อยที่สุดหรือไม่มีเลย</th>
+                  <th class="text-center align-middle" style="width:8%" >น้อย</th>
+                  <th class="text-center align-middle col-bg-gray" style="width:8%" >มาก</th>
+                  <th class="text-center align-middle" style="width:8%" >มากที่สุด</th>
+                </tr>
+              </thead>
+              <tbody>
+
                       <tr>
-                        <td class="main-topic">I9 หน่วยงานของท่าน ใช้จ่ายงบประมาณเพื่อประโยชน์ส่วนตัว กลุ่ม หรือพวกพ้อง มากน้อยเพียงใด <span id="ans_i901_Error" ></span></td>
+                        <td >I9 หน่วยงานของท่าน ใช้จ่ายงบประมาณเพื่อประโยชน์ส่วนตัว กลุ่ม หรือพวกพ้อง มากน้อยเพียงใด <span id="ans_i901_Error" ></span></td>
                         <td class="align-middle col-bg-gray">
                           <div class="custom-control custom-radio ml-2">
                             <input type="radio" name="ans_i901" id="ans_i901_id1" class="custom-control-input" data-error="#ans_i901_Error" value="100" />
@@ -607,11 +751,37 @@
                           </div>
                         </td>
                       </tr>
-                  <!-- End:>> I9 -->
 
-                  <!-- Begin:>> I10 -->
+              </tbody>
+            </table>
+
+          </div> <!-- /.table-responsive -->
+        </div>  <!-- /.form-row -->
+      <!-- End:>> I9 -->
+
+      <!-- Begin:>> I10 -->
+        <div class="form-row is-stop">
+          <div class="table-responsive">
+
+            <table class="table">
+              <thead>
+                <tr >
+                  <th class="text-center align-middle col-bg-gray" rowspan="2" >ประเด็นการประเมิน</th>
+                  <th class="text-center align-middle col-bg-gray" colspan="4">ระดับ</th>
+                </tr>
+
+                <tr >
+                  <th class="text-center align-middle col-bg-gray" style="width:8%" >น้อยที่สุดหรือไม่มีเลย</th>
+                  <th class="text-center align-middle" style="width:8%" >น้อย</th>
+                  <th class="text-center align-middle col-bg-gray" style="width:8%" >มาก</th>
+                  <th class="text-center align-middle" style="width:8%" >มากที่สุด</th>
+                </tr>
+              </thead>
+              <tbody>
+
+
                       <tr>
-                        <td class="main-topic">I10 หน่วยงานของท่าน ใช้จ่ายงบประมาณเพื่อประโยชน์ส่วนตัว กลุ่ม หรือพวกพ้อง มากน้อยเพียงใด <span id="ans_i1001_Error" ></span></td>
+                        <td >I10 บุคลากรในหน่วยงานของท่าน มีการเบิกจ่ายเงิน ที่เป็นเท็จ เช่น ค่าทำงานล่วงเวลา ค่าวัสดุอุปกรณ์  หรือค่าเดินทาง ฯลฯ มากน้อยเพียงใด <span id="ans_i1001_Error" ></span></td>
                         <td class="align-middle col-bg-gray">
                           <div class="custom-control custom-radio ml-2">
                             <input type="radio" name="ans_i1001" id="ans_i1001_id1" class="custom-control-input" data-error="#ans_i1001_Error" value="100" />
@@ -637,11 +807,37 @@
                           </div>
                         </td>
                       </tr>
-                  <!-- End:>> I10 -->
 
-                  <!-- Begin:>> I11 -->
+
+              </tbody>
+            </table>
+
+          </div> <!-- /.table-responsive -->
+        </div>  <!-- /.form-row -->
+      <!-- End:>> I10 -->
+
+      <!-- Begin:>> I11 -->
+        <div class="form-row is-stop">
+          <div class="table-responsive">
+
+            <table class="table">
+              <thead>
+                <tr >
+                  <th class="text-center align-middle col-bg-gray" rowspan="2" >ประเด็นการประเมิน</th>
+                  <th class="text-center align-middle col-bg-gray" colspan="4">ระดับ</th>
+                </tr>
+
+                <tr >
+                  <th class="text-center align-middle col-bg-gray" style="width:8%" >น้อยที่สุดหรือไม่มีเลย</th>
+                  <th class="text-center align-middle" style="width:8%" >น้อย</th>
+                  <th class="text-center align-middle col-bg-gray" style="width:8%" >มาก</th>
+                  <th class="text-center align-middle" style="width:8%" >มากที่สุด</th>
+                </tr>
+              </thead>
+              <tbody>
+
                       <tr>
-                        <td colspan="5" class="main-topic">I11 หน่วยงานของท่าน มีการจัดซื้อจัดจ้าง/การจัดหาพัสดุ และการตรวจรับพัสดุในลักษณะดังต่อไปนี้  มากน้อยเพียงใด </td>
+                        <td colspan="5" >I11 หน่วยงานของท่าน มีการจัดซื้อจัดจ้าง/การจัดหาพัสดุ และการตรวจรับพัสดุในลักษณะดังต่อไปนี้  มากน้อยเพียงใด </td>
                       </tr>
                       <tr>
                         <td>&nbsp;- โปร่งใส ตรวจสอบได้ <span id="ans_i1101_Error" ></span></td>
@@ -699,11 +895,35 @@
                       </tr>
 
 
-                  <!-- End:>> I11 -->
+              </tbody>
+            </table>
 
-                  <!-- Begin:>> I12 -->
+          </div> <!-- /.table-responsive -->
+        </div>  <!-- /.form-row -->
+      <!-- End:>> I11 -->
+
+      <!-- Begin:>> I12 -->
+        <div class="form-row is-stop">
+          <div class="table-responsive">
+
+            <table class="table">
+              <thead>
+                <tr >
+                  <th class="text-center align-middle col-bg-gray" rowspan="2" >ประเด็นการประเมิน</th>
+                  <th class="text-center align-middle col-bg-gray" colspan="4">ระดับ</th>
+                </tr>
+
+                <tr >
+                  <th class="text-center align-middle col-bg-gray" style="width:8%" >น้อยที่สุดหรือไม่มีเลย</th>
+                  <th class="text-center align-middle" style="width:8%" >น้อย</th>
+                  <th class="text-center align-middle col-bg-gray" style="width:8%" >มาก</th>
+                  <th class="text-center align-middle" style="width:8%" >มากที่สุด</th>
+                </tr>
+              </thead>
+              <tbody>
+
                       <tr>
-                        <td colspan="5" class="main-topic">I12 หน่วยงานของท่าน เปิดโอกาสให้ท่าน มีส่วนร่วม ในการตรวจสอบการใช้จ่ายงบประมาณ ตามประเด็นดังต่อไปนี้ มากน้อยเพียงใด</td>
+                        <td colspan="5" >I12 หน่วยงานของท่าน เปิดโอกาสให้ท่าน มีส่วนร่วม ในการตรวจสอบการใช้จ่ายงบประมาณ ตามประเด็นดังต่อไปนี้ มากน้อยเพียงใด</td>
                       </tr>
                       <tr>
                         <td>&nbsp;- สอบถาม <span id="ans_i1201_Error" ></span></td>
@@ -786,18 +1006,12 @@
                           </div>
                         </td>
                       </tr>
-
-
-                  <!-- End:>> I12 -->
-
-
-
-
               </tbody>
             </table>
 
           </div> <!-- /.table-responsive -->
         </div>  <!-- /.form-row -->
+      <!-- End:>> I12 -->
 
 
         <!-- ส่วนที่ 3  -->
@@ -807,13 +1021,14 @@
           </div>
         </div>
 
+      <!-- Begin:>> I13 -->
         <div class="form-row is-stop">
           <div class="table-responsive">
 
             <table class="table">
               <thead>
                 <tr >
-                  <th class="text-center align-middle" rowspan="2" >ประเด็นการประเมิน</th>
+                  <th class="text-center align-middle col-bg-gray" rowspan="2" >ประเด็นการประเมิน</th>
                   <th class="text-center align-middle col-bg-gray" colspan="4">ระดับ</th>
                 </tr>
 
@@ -825,10 +1040,9 @@
                 </tr>
               </thead>
               <tbody>
-                  <!-- Begin:>> I13 -->
 
                       <tr>
-                        <td class="main-topic">I13 ท่านได้รับมอบหมายงานจากผู้บังคับบัญชาอย่างเป็นธรรม มากน้อยเพียงใด <span id="ans_i1301_Error" ></span></td>
+                        <td >I13 ท่านได้รับมอบหมายงานจากผู้บังคับบัญชาอย่างเป็นธรรม มากน้อยเพียงใด <span id="ans_i1301_Error" ></span></td>
                         <td class="align-middle col-bg-gray">
                           <div class="custom-control custom-radio ml-2">
                             <input type="radio" name="ans_i1301" id="ans_i1301_id1" class="custom-control-input" data-error="#ans_i1301_Error" value="0" />
@@ -855,12 +1069,38 @@
                         </td>
                       </tr>
 
-                  <!-- End:>> I13 -->
+              </tbody>
+            </table>
 
-                  <!-- Begin:>> I14 -->
+          </div> <!-- /.table-responsive -->
+        </div>  <!-- /.form-row -->
+      <!-- End:>> I13 -->
+
+
+      <!-- Begin:>> I14 -->
+        <div class="form-row is-stop">
+          <div class="table-responsive">
+
+            <table class="table">
+              <thead>
+                <tr >
+                  <th class="text-center align-middle col-bg-gray" rowspan="2" >ประเด็นการประเมิน</th>
+                  <th class="text-center align-middle col-bg-gray" colspan="4">ระดับ</th>
+                </tr>
+
+                <tr >
+                  <th class="text-center align-middle col-bg-gray" style="width:8%" >น้อยที่สุดหรือไม่มีเลย</th>
+                  <th class="text-center align-middle" style="width:8%" >น้อย</th>
+                  <th class="text-center align-middle col-bg-gray" style="width:8%" >มาก</th>
+                  <th class="text-center align-middle" style="width:8%" >มากที่สุด</th>
+                </tr>
+              </thead>
+              <tbody>
+
+
 
                       <tr>
-                        <td class="main-topic">I14 ท่านได้รับการประเมินผลการปฏิบัติงาน ตามระดับคุณภาพของผลงานอย่างถูกต้อง มากน้อยเพียงใด <span id="ans_i1401_Error" ></span></td>
+                        <td >I14 ท่านได้รับการประเมินผลการปฏิบัติงาน ตามระดับคุณภาพของผลงานอย่างถูกต้อง มากน้อยเพียงใด <span id="ans_i1401_Error" ></span></td>
                         <td class="align-middle col-bg-gray">
                           <div class="custom-control custom-radio ml-2">
                             <input type="radio" name="ans_i1401" id="ans_i1401_id1" class="custom-control-input" data-error="#ans_i1401_Error" value="0" />
@@ -887,13 +1127,35 @@
                         </td>
                       </tr>
 
+              </tbody>
+            </table>
 
-                  <!-- Begin:>> I14 -->
+          </div> <!-- /.table-responsive -->
+        </div>  <!-- /.form-row -->
+      <!-- Begin:>> I14 -->
 
-                  <!-- Begin:>> I15 -->
+      <!-- Begin:>> I15 -->
+        <div class="form-row is-stop">
+          <div class="table-responsive">
+
+            <table class="table">
+              <thead>
+                <tr >
+                  <th class="text-center align-middle col-bg-gray" rowspan="2" >ประเด็นการประเมิน</th>
+                  <th class="text-center align-middle col-bg-gray" colspan="4">ระดับ</th>
+                </tr>
+
+                <tr >
+                  <th class="text-center align-middle col-bg-gray" style="width:8%" >น้อยที่สุดหรือไม่มีเลย</th>
+                  <th class="text-center align-middle" style="width:8%" >น้อย</th>
+                  <th class="text-center align-middle col-bg-gray" style="width:8%" >มาก</th>
+                  <th class="text-center align-middle" style="width:8%" >มากที่สุด</th>
+                </tr>
+              </thead>
+              <tbody>
 
                       <tr>
-                        <td class="main-topic">I15 ผู้บังคับบัญชาของท่าน มีการคัดเลือกผู้เข้ารับการฝึกอบรม การศึกษาดูงาน หรือการให้ทุนการศึกษา อย่างเป็นธรรม มากน้อยเพียงใด <span id="ans_i1501_Error" ></span></td>
+                        <td >I15 ผู้บังคับบัญชาของท่าน มีการคัดเลือกผู้เข้ารับการฝึกอบรม การศึกษาดูงาน หรือการให้ทุนการศึกษา อย่างเป็นธรรม มากน้อยเพียงใด <span id="ans_i1501_Error" ></span></td>
                         <td class="align-middle col-bg-gray">
                           <div class="custom-control custom-radio ml-2">
                             <input type="radio" name="ans_i1501" id="ans_i1501_id1" class="custom-control-input" data-error="#ans_i1501_Error" value="0" />
@@ -919,14 +1181,35 @@
                           </div>
                         </td>
                       </tr>
+              </tbody>
+            </table>
 
+          </div> <!-- /.table-responsive -->
+        </div>  <!-- /.form-row -->
+      <!-- Begin:>> I15 -->
 
-                  <!-- Begin:>> I15 -->
+      <!-- Begin:>> I16 -->
+        <div class="form-row is-stop">
+          <div class="table-responsive">
 
-                  <!-- Begin:>> I16 -->
+            <table class="table">
+              <thead>
+                <tr >
+                  <th class="text-center align-middle col-bg-gray" rowspan="2" >ประเด็นการประเมิน</th>
+                  <th class="text-center align-middle col-bg-gray" colspan="4">ระดับ</th>
+                </tr>
+
+                <tr >
+                  <th class="text-center align-middle col-bg-gray" style="width:8%" >น้อยที่สุดหรือไม่มีเลย</th>
+                  <th class="text-center align-middle" style="width:8%" >น้อย</th>
+                  <th class="text-center align-middle col-bg-gray" style="width:8%" >มาก</th>
+                  <th class="text-center align-middle" style="width:8%" >มากที่สุด</th>
+                </tr>
+              </thead>
+              <tbody>
 
                       <tr>
-                        <td class="main-topic">I16 ท่านเคยถูกผู้บังคับบัญชาสั่งการให้ทำธุระส่วนตัวของผู้บังคับบัญชา มากน้อยเพียงใด <span id="ans_i1601_Error" ></span></td>
+                        <td >I16 ท่านเคยถูกผู้บังคับบัญชาสั่งการให้ทำธุระส่วนตัวของผู้บังคับบัญชา มากน้อยเพียงใด <span id="ans_i1601_Error" ></span></td>
                         <td class="align-middle col-bg-gray">
                           <div class="custom-control custom-radio ml-2">
                             <input type="radio" name="ans_i1601" id="ans_i1601_id1" class="custom-control-input" data-error="#ans_i1601_Error" value="100" />
@@ -953,13 +1236,35 @@
                         </td>
                       </tr>
 
+              </tbody>
+            </table>
 
-                  <!-- Begin:>> I16 -->
+          </div> <!-- /.table-responsive -->
+        </div>  <!-- /.form-row -->
+      <!-- Begin:>> I16 -->
 
-                  <!-- Begin:>> I17 -->
 
+      <!-- Begin:>> I17 -->
+        <div class="form-row is-stop">
+          <div class="table-responsive">
+
+            <table class="table">
+              <thead>
+                <tr >
+                  <th class="text-center align-middle col-bg-gray" rowspan="2" >ประเด็นการประเมิน</th>
+                  <th class="text-center align-middle col-bg-gray" colspan="4">ระดับ</th>
+                </tr>
+
+                <tr >
+                  <th class="text-center align-middle col-bg-gray" style="width:8%" >น้อยที่สุดหรือไม่มีเลย</th>
+                  <th class="text-center align-middle" style="width:8%" >น้อย</th>
+                  <th class="text-center align-middle col-bg-gray" style="width:8%" >มาก</th>
+                  <th class="text-center align-middle" style="width:8%" >มากที่สุด</th>
+                </tr>
+              </thead>
+              <tbody>
                       <tr>
-                        <td class="main-topic">I17 ท่านเคยถูกผู้บังคับบัญชาสั่งการให้ทำในสิ่งที่ไม่ถูกต้อง หรือมีความเสี่ยงต่อการทุจริต มากน้อยเพียงใด <span id="ans_i1701_Error" ></span></td>
+                        <td >I17 ท่านเคยถูกผู้บังคับบัญชาสั่งการให้ทำในสิ่งที่ไม่ถูกต้อง หรือมีความเสี่ยงต่อการทุจริต มากน้อยเพียงใด <span id="ans_i1701_Error" ></span></td>
                         <td class="align-middle col-bg-gray">
                           <div class="custom-control custom-radio ml-2">
                             <input type="radio" name="ans_i1701" id="ans_i1701_id1" class="custom-control-input" data-error="#ans_i1701_Error" value="100" />
@@ -985,13 +1290,36 @@
                           </div>
                         </td>
                       </tr>
+              </tbody>
+            </table>
+
+          </div> <!-- /.table-responsive -->
+        </div>  <!-- /.form-row -->
+      <!-- Begin:>> I17 -->
+
+      <!-- Begin:>> I8 -->
+        <div class="form-row is-stop">
+          <div class="table-responsive">
+
+            <table class="table">
+              <thead>
+                <tr >
+                  <th class="text-center align-middle col-bg-gray" rowspan="2" >ประเด็นการประเมิน</th>
+                  <th class="text-center align-middle col-bg-gray" colspan="4">ระดับ</th>
+                </tr>
+
+                <tr >
+                  <th class="text-center align-middle col-bg-gray" style="width:8%" >น้อยที่สุดหรือไม่มีเลย</th>
+                  <th class="text-center align-middle" style="width:8%" >น้อย</th>
+                  <th class="text-center align-middle col-bg-gray" style="width:8%" >มาก</th>
+                  <th class="text-center align-middle" style="width:8%" >มากที่สุด</th>
+                </tr>
+              </thead>
+              <tbody>
 
 
-                  <!-- Begin:>> I17 -->
-
-                  <!-- Begin:>> I8 -->
                       <tr>
-                        <td colspan="5" class="main-topic">I18 การบริหารงานบุคคลของหน่วยงานของท่าน  มีลักษณะดังต่อไปนี้ มากน้อยเพียงใด</td>
+                        <td colspan="5" >I18 การบริหารงานบุคคลของหน่วยงานของท่าน  มีลักษณะดังต่อไปนี้ มากน้อยเพียงใด</td>
                       </tr>
                       <tr>
                         <td>&nbsp;- ถูกแทรกแซงจากผู้มีอำนาจ <span id="ans_i1801_Error" ></span></td>
@@ -1074,13 +1402,13 @@
                           </div>
                         </td>
                       </tr>
-                  <!-- End:>> I18 -->
 
               </tbody>
             </table>
 
           </div> <!-- /.table-responsive -->
         </div>  <!-- /.form-row -->
+      <!-- End:>> I18 -->
 
         <!-- ส่วนที่ 4  -->
         <div class="row mt-3">
@@ -1089,13 +1417,15 @@
           </div>
         </div>
 
+
+      <!-- Begin:>> I19 -->
         <div class="form-row is-stop">
           <div class="table-responsive">
 
             <table class="table">
               <thead>
                 <tr >
-                  <th class="text-center align-middle" rowspan="2" >ประเด็นการประเมิน</th>
+                  <th class="text-center align-middle col-bg-gray" rowspan="2" >ประเด็นการประเมิน</th>
                   <th class="text-center align-middle col-bg-gray" colspan="4">ระดับ</th>
                 </tr>
 
@@ -1108,10 +1438,8 @@
               </thead>
               <tbody>
 
-                  <!-- Begin:>> I19 -->
-
                       <tr>
-                        <td class="main-topic">I19 บุคลากรในหน่วยงานของท่าน มีการเอาทรัพย์สินของราชการ ไปเป็นของส่วนตัว หรือนำไปให้กลุ่มหรือพวกพ้อง มากน้อยเพียงใด <span id="ans_i1901_Error" ></span></td>
+                        <td >I19 บุคลากรในหน่วยงานของท่าน มีการเอาทรัพย์สินของราชการ ไปเป็นของส่วนตัว หรือนำไปให้กลุ่มหรือพวกพ้อง มากน้อยเพียงใด <span id="ans_i1901_Error" ></span></td>
                         <td class="align-middle col-bg-gray">
                           <div class="custom-control custom-radio ml-2">
                             <input type="radio" name="ans_i1901" id="ans_i1901_id1" class="custom-control-input" data-error="#ans_i1901_Error" value="100" />
@@ -1138,12 +1466,35 @@
                         </td>
                       </tr>
 
-                  <!-- End:>> I19 -->
+              </tbody>
+            </table>
 
-                  <!-- Begin:>> I20 -->
+          </div> <!-- /.table-responsive -->
+        </div>  <!-- /.form-row -->
+      <!-- End:>> I19 -->
+
+      <!-- Begin:>> I20 -->
+        <div class="form-row is-stop">
+          <div class="table-responsive">
+
+            <table class="table">
+              <thead>
+                <tr >
+                  <th class="text-center align-middle col-bg-gray" rowspan="2" >ประเด็นการประเมิน</th>
+                  <th class="text-center align-middle col-bg-gray" colspan="4">ระดับ</th>
+                </tr>
+
+                <tr >
+                  <th class="text-center align-middle col-bg-gray" style="width:8%" >น้อยที่สุดหรือไม่มีเลย</th>
+                  <th class="text-center align-middle" style="width:8%" >น้อย</th>
+                  <th class="text-center align-middle col-bg-gray" style="width:8%" >มาก</th>
+                  <th class="text-center align-middle" style="width:8%" >มากที่สุด</th>
+                </tr>
+              </thead>
+              <tbody>
 
                       <tr>
-                        <td class="main-topic">I20 ขั้นตอนการขออนุญาตเพื่อยืมทรัพย์สินของราชการ ไปใช้ปฏิบัติงานในหน่วยงานของท่าน มีความสะดวกมากน้อยเพียงใด <span id="ans_i2001_Error" ></span></td>
+                        <td >I20 ขั้นตอนการขออนุญาตเพื่อยืมทรัพย์สินของราชการ ไปใช้ปฏิบัติงานในหน่วยงานของท่าน มีความสะดวกมากน้อยเพียงใด <span id="ans_i2001_Error" ></span></td>
                         <td class="align-middle col-bg-gray">
                           <div class="custom-control custom-radio ml-2">
                             <input type="radio" name="ans_i2001" id="ans_i2001_id1" class="custom-control-input" data-error="#ans_i2001_Error" value="0" />
@@ -1170,13 +1521,37 @@
                         </td>
                       </tr>
 
+              </tbody>
+            </table>
 
-                  <!-- End:>> I20 -->
+          </div> <!-- /.table-responsive -->
+        </div>  <!-- /.form-row -->
+      <!-- End:>> I20 -->
 
-                  <!-- Begin:>> I21 -->
+      <!-- Begin:>> I21 -->
+        <div class="form-row is-stop">
+          <div class="table-responsive">
+
+            <table class="table">
+              <thead>
+                <tr >
+                  <th class="text-center align-middle col-bg-gray" rowspan="2" >ประเด็นการประเมิน</th>
+                  <th class="text-center align-middle col-bg-gray" colspan="4">ระดับ</th>
+                </tr>
+
+                <tr >
+                  <th class="text-center align-middle col-bg-gray" style="width:8%" >น้อยที่สุดหรือไม่มีเลย</th>
+                  <th class="text-center align-middle" style="width:8%" >น้อย</th>
+                  <th class="text-center align-middle col-bg-gray" style="width:8%" >มาก</th>
+                  <th class="text-center align-middle" style="width:8%" >มากที่สุด</th>
+                </tr>
+              </thead>
+              <tbody>
+
+
 
                       <tr>
-                        <td class="main-topic">I21 ถ้าต้องมีการขอยืมทรัพย์สินของราชการ ไปใช้ปฏิบัติงาน บุคลากรในหน่วยงานของท่าน  มีการขออนุญาตอย่างถูกต้อง มากน้อยเพียงใด <span id="ans_i2101_Error" ></span></td>
+                        <td >I21 ถ้าต้องมีการขอยืมทรัพย์สินของราชการ ไปใช้ปฏิบัติงาน บุคลากรในหน่วยงานของท่าน  มีการขออนุญาตอย่างถูกต้อง มากน้อยเพียงใด <span id="ans_i2101_Error" ></span></td>
                         <td class="align-middle col-bg-gray">
                           <div class="custom-control custom-radio ml-2">
                             <input type="radio" name="ans_i2101" id="ans_i2101_id1" class="custom-control-input" data-error="#ans_i2101_Error" value="0" />
@@ -1203,12 +1578,41 @@
                         </td>
                       </tr>
 
-                  <!-- End:>> I21 -->
 
-                  <!-- Begin:>> I22 -->
+
+
+              </tbody>
+            </table>
+
+          </div> <!-- /.table-responsive -->
+        </div>  <!-- /.form-row -->
+      <!-- End:>> I21 -->
+
+
+      <!-- Begin:>> I22 -->
+        <div class="form-row is-stop">
+          <div class="table-responsive">
+
+            <table class="table">
+              <thead>
+                <tr >
+                  <th class="text-center align-middle col-bg-gray" rowspan="2" >ประเด็นการประเมิน</th>
+                  <th class="text-center align-middle col-bg-gray" colspan="4">ระดับ</th>
+                </tr>
+
+                <tr >
+                  <th class="text-center align-middle col-bg-gray" style="width:8%" >น้อยที่สุดหรือไม่มีเลย</th>
+                  <th class="text-center align-middle" style="width:8%" >น้อย</th>
+                  <th class="text-center align-middle col-bg-gray" style="width:8%" >มาก</th>
+                  <th class="text-center align-middle" style="width:8%" >มากที่สุด</th>
+                </tr>
+              </thead>
+              <tbody>
+
+
 
                       <tr>
-                        <td class="main-topic">I22 บุคคลภายนอกหรือภาคเอกชน มีการนำทรัพย์สินของราชการไปใช้ โดยไม่ได้ขออนุญาตอย่างถูกต้อง จากหน่วยงานของท่าน มากน้อยเพียงใด <span id="ans_i2201_Error" ></span></td>
+                        <td >I22 บุคคลภายนอกหรือภาคเอกชน มีการนำทรัพย์สินของราชการไปใช้ โดยไม่ได้ขออนุญาตอย่างถูกต้อง จากหน่วยงานของท่าน มากน้อยเพียงใด <span id="ans_i2201_Error" ></span></td>
                         <td class="align-middle col-bg-gray">
                           <div class="custom-control custom-radio ml-2">
                             <input type="radio" name="ans_i2201" id="ans_i2201_id1" class="custom-control-input" data-error="#ans_i2201_Error" value="100" />
@@ -1235,13 +1639,36 @@
                         </td>
                       </tr>
 
+              </tbody>
+            </table>
 
-                  <!-- End:>> I22 -->
+          </div> <!-- /.table-responsive -->
+        </div>  <!-- /.form-row -->
+      <!-- End:>> I22 -->
 
-                  <!-- Begin:>> I23 -->
+
+      <!-- Begin:>> I23 -->
+        <div class="form-row is-stop">
+          <div class="table-responsive">
+
+            <table class="table">
+              <thead>
+                <tr >
+                  <th class="text-center align-middle col-bg-gray" rowspan="2" >ประเด็นการประเมิน</th>
+                  <th class="text-center align-middle col-bg-gray" colspan="4">ระดับ</th>
+                </tr>
+
+                <tr >
+                  <th class="text-center align-middle col-bg-gray" style="width:8%" >น้อยที่สุดหรือไม่มีเลย</th>
+                  <th class="text-center align-middle" style="width:8%" >น้อย</th>
+                  <th class="text-center align-middle col-bg-gray" style="width:8%" >มาก</th>
+                  <th class="text-center align-middle" style="width:8%" >มากที่สุด</th>
+                </tr>
+              </thead>
+              <tbody>
 
                       <tr>
-                        <td class="main-topic">I23 ท่านรู้แนวปฏิบัติของหน่วยงานของท่าน เกี่ยวกับการใช้ทรัพย์สินของราชการที่ถูกต้อง มากน้อยเพียงใด <span id="ans_i2301_Error" ></span></td>
+                        <td >I23 ท่านรู้แนวปฏิบัติของหน่วยงานของท่าน เกี่ยวกับการใช้ทรัพย์สินของราชการที่ถูกต้อง มากน้อยเพียงใด <span id="ans_i2301_Error" ></span></td>
                         <td class="align-middle col-bg-gray">
                           <div class="custom-control custom-radio ml-2">
                             <input type="radio" name="ans_i2301" id="ans_i2301_id1" class="custom-control-input" data-error="#ans_i2301_Error" value="0" />
@@ -1268,13 +1695,35 @@
                         </td>
                       </tr>
 
+              </tbody>
+            </table>
 
-                  <!-- End:>> I23 -->
+          </div> <!-- /.table-responsive -->
+        </div>  <!-- /.form-row -->
+      <!-- End:>> I23 -->
 
-                  <!-- Begin:>> I24 -->
 
+      <!-- Begin:>> I24 -->
+        <div class="form-row is-stop">
+          <div class="table-responsive">
+
+            <table class="table">
+              <thead>
+                <tr >
+                  <th class="text-center align-middle col-bg-gray" rowspan="2" >ประเด็นการประเมิน</th>
+                  <th class="text-center align-middle col-bg-gray" colspan="4">ระดับ</th>
+                </tr>
+
+                <tr >
+                  <th class="text-center align-middle col-bg-gray" style="width:8%" >น้อยที่สุดหรือไม่มีเลย</th>
+                  <th class="text-center align-middle" style="width:8%" >น้อย</th>
+                  <th class="text-center align-middle col-bg-gray" style="width:8%" >มาก</th>
+                  <th class="text-center align-middle" style="width:8%" >มากที่สุด</th>
+                </tr>
+              </thead>
+              <tbody>
                       <tr>
-                        <td class="main-topic">I24 หน่วยงานของท่าน มีการกำกับดูแลและตรวจสอบการใช้ทรัพย์สินของราชการ เพื่อป้องกันไม่ให้มีการนำไปใช้ประโยชน์ส่วนตัว กลุ่ม หรือพวกพ้อง มากน้อยเพียงใด <span id="ans_i2401_Error" ></span></td>
+                        <td >I24 หน่วยงานของท่าน มีการกำกับดูแลและตรวจสอบการใช้ทรัพย์สินของราชการ เพื่อป้องกันไม่ให้มีการนำไปใช้ประโยชน์ส่วนตัว กลุ่ม หรือพวกพ้อง มากน้อยเพียงใด <span id="ans_i2401_Error" ></span></td>
                         <td class="align-middle col-bg-gray">
                           <div class="custom-control custom-radio ml-2">
                             <input type="radio" name="ans_i2401" id="ans_i2401_id1" class="custom-control-input" data-error="#ans_i2401_Error" value="0" />
@@ -1301,13 +1750,14 @@
                         </td>
                       </tr>
 
-                  <!-- End:>> I24 -->
+
 
               </tbody>
             </table>
 
           </div> <!-- /.table-responsive -->
         </div>  <!-- /.form-row -->
+      <!-- End:>> I24 -->
 
 
 
@@ -1318,13 +1768,14 @@
           </div>
         </div>
 
+      <!-- Begin:>> I25 -->
         <div class="form-row is-stop">
           <div class="table-responsive">
 
             <table class="table">
               <thead>
                 <tr >
-                  <th class="text-center align-middle" rowspan="2" >ประเด็นการประเมิน</th>
+                  <th class="text-center align-middle col-bg-gray" rowspan="2" >ประเด็นการประเมิน</th>
                   <th class="text-center align-middle col-bg-gray" colspan="4">ระดับ</th>
                 </tr>
 
@@ -1337,10 +1788,9 @@
               </thead>
               <tbody>
 
-                  <!-- Begin:>> I25 -->
 
                       <tr>
-                        <td class="main-topic">I25 ผู้บริหารสูงสุดของหน่วยงานของท่าน ให้ความสำคัญ กับการต่อต้านการทุจริต มากน้อยเพียงใด <span id="ans_i2501_Error" ></span></td>
+                        <td >I25 ผู้บริหารสูงสุดของหน่วยงานของท่าน ให้ความสำคัญ กับการต่อต้านการทุจริต มากน้อยเพียงใด <span id="ans_i2501_Error" ></span></td>
                         <td class="align-middle col-bg-gray">
                           <div class="custom-control custom-radio ml-2">
                             <input type="radio" name="ans_i2501" id="ans_i2501_id1" class="custom-control-input" data-error="#ans_i2501_Error" value="0" />
@@ -1367,21 +1817,23 @@
                         </td>
                       </tr>
 
-                  <!-- End:>> I25 -->
+
               </tbody>
             </table>
 
           </div> <!-- /.table-responsive -->
         </div>  <!-- /.form-row -->
+      <!-- End:>> I25 -->
 
 
+      <!-- Begin:>> I26 -->
         <div class="form-row is-stop">
           <div class="table-responsive">
 
             <table class="table">
               <thead>
                 <tr >
-                  <th class="text-center align-middle" rowspan="2" >ประเด็นการประเมิน</th>
+                  <th class="text-center align-middle col-bg-gray" rowspan="2" >ประเด็นการประเมิน</th>
                   <th class="text-center align-middle col-bg-gray" colspan="2">ระดับ</th>
                 </tr>
 
@@ -1392,9 +1844,8 @@
               </thead>
               <tbody>
 
-                  <!-- Begin:>> I26 -->
                   <tr>
-                        <td colspan="5" class="main-topic">I26 หน่วยงานของท่าน มีการดำเนินการ ดังต่อไปนี้ หรือไม่</td>
+                        <td colspan="5" >I26 หน่วยงานของท่าน มีการดำเนินการ ดังต่อไปนี้ หรือไม่</td>
                       </tr>
                       <tr>
                         <td>&nbsp;- ทบทวนนโยบายหรือมาตรการป้องกันการทุจริตในหน่วยงานให้มีประสิทธิภาพ <span id="ans_i2601_Error" ></span></td>
@@ -1427,23 +1878,23 @@
                           </div>
                         </td>
                       </tr>
-                  <!-- End:>> I26 -->
+
 
               </tbody>
             </table>
 
           </div> <!-- /.table-responsive -->
         </div>  <!-- /.form-row -->
+      <!-- End:>> I26 -->
 
-
-
+      <!-- Begin:>> I27 -->
         <div class="form-row is-stop">
           <div class="table-responsive">
 
             <table class="table">
               <thead>
                 <tr >
-                  <th class="text-center align-middle" rowspan="2" >ประเด็นการประเมิน</th>
+                  <th class="text-center align-middle col-bg-gray" rowspan="2" >ประเด็นการประเมิน</th>
                   <th class="text-center align-middle col-bg-gray" colspan="4">ระดับ</th>
                 </tr>
 
@@ -1456,10 +1907,8 @@
               </thead>
               <tbody>
 
-                  <!-- Begin:>> I27 -->
-
                       <tr>
-                        <td class="main-topic">I27 ปัญหาการทุจริตในหน่วยงานของท่าน ได้รับการแก้ไข มากน้อยเพียงใด <span id="ans_i2701_Error" ></span></td>
+                        <td >I27 ปัญหาการทุจริตในหน่วยงานของท่าน ได้รับการแก้ไข มากน้อยเพียงใด <span id="ans_i2701_Error" ></span></td>
                         <td class="align-middle col-bg-gray">
                           <div class="custom-control custom-radio ml-2">
                             <input type="radio" name="ans_i2701" id="ans_i2701_id1" class="custom-control-input" data-error="#ans_i2701_Error" value="0" />
@@ -1489,17 +1938,47 @@
                       <tr>
                         <td colspan="5" class="remark-title">หมายเหตุ: หากท่านเห็นว่าหน่วยงานของท่านไม่มีปัญหาการทุจริตให้ตอบ “มากที่สุด”</td>
                       </tr>
-                  <!-- End:>> I27 -->
 
-                  <!-- Begin:>> I28 -->
+
+
+
+              </tbody>
+            </table>
+
+          </div> <!-- /.table-responsive -->
+        </div>  <!-- /.form-row -->
+      <!-- End:>> I27 -->
+
+
+       <!-- Begin:>> I28 -->
+        <div class="form-row is-stop">
+          <div class="table-responsive">
+
+            <table class="table">
+              <thead>
+                <tr >
+                  <th class="text-center align-middle col-bg-gray" rowspan="2" >ประเด็นการประเมิน</th>
+                  <th class="text-center align-middle col-bg-gray" colspan="4">ระดับ</th>
+                </tr>
+
+                <tr >
+                  <th class="text-center align-middle col-bg-gray" style="width:8%" >น้อยที่สุดหรือไม่มีเลย</th>
+                  <th class="text-center align-middle" style="width:8%" >น้อย</th>
+                  <th class="text-center align-middle col-bg-gray" style="width:8%" >มาก</th>
+                  <th class="text-center align-middle" style="width:8%" >มากที่สุด</th>
+                </tr>
+              </thead>
+              <tbody>
+
+
 
                       <tr>
-                        <td colspan="5" class="main-topic">
+                        <td colspan="5" >
                           I28 หน่วยงานของท่าน มีการดำเนินการดังต่อไปนี้  ต่อการทุจริตในหน่วยงาน มากน้อยเพียงใด
                         </td>
                       </tr>
                       <tr>
-                        <td>&nbsp;- เผ้าระวังการทุจริต <span id="ans_i2801_Error" ></span></td>
+                        <td>&nbsp;- เฝ้าระวังการทุจริต <span id="ans_i2801_Error" ></span></td>
                         <td class="align-middle col-bg-gray">
                           <div class="custom-control custom-radio ml-2">
                             <input type="radio" name="ans_i2801" id="ans_i2801_id1" class="custom-control-input" data-error="#ans_i2801_Error" value="0" />
@@ -1585,12 +2064,41 @@
                       </tr>
 
 
-                  <!-- End:>> I28 -->
 
-                  <!-- Begin:>> I29 -->
+
+
+              </tbody>
+            </table>
+
+          </div> <!-- /.table-responsive -->
+        </div>  <!-- /.form-row -->
+      <!-- End:>> I28 -->
+
+      <!-- Begin:>> I29 -->
+        <div class="form-row is-stop">
+          <div class="table-responsive">
+
+            <table class="table">
+              <thead>
+                <tr >
+                  <th class="text-center align-middle col-bg-gray" rowspan="2" >ประเด็นการประเมิน</th>
+                  <th class="text-center align-middle col-bg-gray" colspan="4">ระดับ</th>
+                </tr>
+
+                <tr >
+                  <th class="text-center align-middle col-bg-gray" style="width:8%" >น้อยที่สุดหรือไม่มีเลย</th>
+                  <th class="text-center align-middle" style="width:8%" >น้อย</th>
+                  <th class="text-center align-middle col-bg-gray" style="width:8%" >มาก</th>
+                  <th class="text-center align-middle" style="width:8%" >มากที่สุด</th>
+                </tr>
+              </thead>
+              <tbody>
+
+
+
 
                       <tr>
-                        <td class="main-topic">I29 หน่วยงานของท่าน มีการนำผลการตรวจสอบของฝ่ายตรวจสอบ ทั้งภายในและภายนอกหน่วยงานไปปรับปรุงการทำงาน เพื่อป้องกันการทุจริตในหน่วยงาน มากน้อยเพียงใด <span id="ans_i2901_Error" ></span></td>
+                        <td >I29 หน่วยงานของท่าน มีการนำผลการตรวจสอบของฝ่ายตรวจสอบ ทั้งภายในและภายนอกหน่วยงานไปปรับปรุงการทำงาน เพื่อป้องกันการทุจริตในหน่วยงาน มากน้อยเพียงใด <span id="ans_i2901_Error" ></span></td>
                         <td class="align-middle col-bg-gray">
                           <div class="custom-control custom-radio ml-2">
                             <input type="radio" name="ans_i2901" id="ans_i2901_id1" class="custom-control-input" data-error="#ans_i2901_Error" value="0" />
@@ -1620,11 +2128,37 @@
                         <td colspan="5" class="remark-title">หมายเหตุ: ฝ่ายตรวจสอบภายใน หมายถึง ส่วนงานตรวจสอบภายในของหน่วยงาน ฝ่ายตรวจสอบภายนอก หมายถึง หน่วยงานที่มีอำนาจหน้าที่ตรวจสอบการดำเนินงานของหน่วยงานภาครัฐ เช่น สำนักงานการตรวจเงินแผ่นดิน สำนักงาน ป.ป.ช. สำนักงาน ป.ป.ท. เป็นต้น</td>
                       </tr>
 
-                  <!-- End:>> I29 -->
+              </tbody>
+            </table>
 
-                  <!-- Begin:>> I30 -->
+          </div> <!-- /.table-responsive -->
+        </div>  <!-- /.form-row -->
+      <!-- End:>> I29 -->
+
+
+      <!-- Begin:>> I30 -->
+        <div class="form-row is-stop">
+          <div class="table-responsive">
+
+            <table class="table">
+              <thead>
+                <tr >
+                  <th class="text-center align-middle col-bg-gray" rowspan="2" >ประเด็นการประเมิน</th>
+                  <th class="text-center align-middle col-bg-gray" colspan="4">ระดับ</th>
+                </tr>
+
+                <tr >
+                  <th class="text-center align-middle col-bg-gray" style="width:8%" >น้อยที่สุดหรือไม่มีเลย</th>
+                  <th class="text-center align-middle" style="width:8%" >น้อย</th>
+                  <th class="text-center align-middle col-bg-gray" style="width:8%" >มาก</th>
+                  <th class="text-center align-middle" style="width:8%" >มากที่สุด</th>
+                </tr>
+              </thead>
+              <tbody>
+
+
                       <tr>
-                        <td colspan="5" class="main-topic">
+                        <td colspan="5" >
                           I30 หากท่านพบเห็นแนวโน้มการทุจริตที่จะเกิดขึ้นในหน่วยงานของท่าน ท่านมีความคิดเห็นต่อประเด็นดังต่อไปนี้ อย่างไร
                         </td>
                       </tr>
@@ -1736,13 +2270,14 @@
                           </div>
                         </td>
                       </tr>
-                  <!-- End:>> I30 -->
+
 
               </tbody>
             </table>
 
           </div> <!-- /.table-responsive -->
         </div>  <!-- /.form-row -->
+      <!-- End:>> I30 -->
 
           <div id="secsubmit" class="section-box" >
             <!-- ### Submit ### -->

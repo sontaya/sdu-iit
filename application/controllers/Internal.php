@@ -1,9 +1,6 @@
 <?php
 defined('BASEPATH') OR exit('No direct script access allowed');
 
-use PhpOffice\PhpSpreadsheet\Spreadsheet;
-use PhpOffice\PhpSpreadsheet\Writer\Xlsx;
-
 class Internal extends CI_Controller {
 
     /**
@@ -22,22 +19,37 @@ class Internal extends CI_Controller {
     * @see https://codeigniter.com/user_guide/general/urls.html
     */
     public function __construct() {
+
+      header('Access-Control-Allow-Origin: *');
+    	header("Access-Control-Allow-Methods: GET, POST, OPTIONS, PUT, DELETE");
+
       parent::__construct();
 
       // $this->load->model('search_model', 'search');
       // $this->load->model('Question_model');
-      $this->load->helper('security');
 
+      $this->load->helper('security');
+      $this->load->model('Auth_model');
       $this->load->model('QuestionIit_model');
 
-      // if(!$this->session->userdata('auth_session')['STD_CODE'])
+      // if(!$this->session->userdata('auth_session')['uid'])
       // {
-      //   $allowed = array('index','auth', 'check_auth', 'clear_auth', 'get_tumbon', 'get_postype', 'get_pos', 'get_leveledu', 'get_proname','form_view');
+      //   $allowed = array('index','do_login', 'do_login_session', 'dashboard');
       //   if(!in_array($this->router->fetch_method(), $allowed))
       //   {
-      //     redirect('Question/index');
+      //     redirect('internal/index');
       //   }
       // }
+
+      if( empty($this->session->userdata('auth')['uid']))
+      {
+          $allowed = array('index','do_login', 'do_login_session', 'dashboard');
+          if(! in_array($this->router->fetch_method(), $allowed))
+          {
+            redirect('internal/index');
+          }
+		  }
+
     }
 
 
@@ -48,12 +60,62 @@ class Internal extends CI_Controller {
         'name' => $this->security->get_csrf_token_name(),
         'hash' => $this->security->get_csrf_hash()
       );
+      $this->load->view('internal/index', $data);
 
-      // $data['questions'] = $this->db->get('qn_pl_question')->result();
-      // $data['round'] = $this->db->get_where('qn_pl_round',array('status'=>'Y'))->row();
+    }
+
+
+    public function do_login()
+    {
+      $username = $this->input->post('username');
+      $passwd = $this->input->post('passwd');
+      $response = $this->Auth_model->login($username,$passwd);
+
+      header('Content-Type: application/json');
+      echo json_encode($response);
+
+    }
+
+    public function do_login_session()
+    {
+      $client_ip = get_client_ip();
+      $timestamp = date('Y-m-d H:i:s');
+
+      $uid = $this->input->post("uid");
+      $user_id = $this->input->post("user_id");
+      $citizencode = $this->input->post("citizencode");
+      $name = $this->input->post("name");
+      $surname = $this->input->post("surname");
+      $displayname = $this->input->post("displayname");
+
+        //--Store session
+        $sessiondata = array(
+          'uid' => $uid,
+          'hrcode' => $user_id,
+          'citizencode' => $citizencode,
+          'displayname' => $displayname,
+          'name' => $name,
+          'surname' => $surname
+        );
+
+      $this->session->set_userdata('auth',$sessiondata);
+
+      header('Content-Type: application/json');
+      echo json_encode($sessiondata);
+
+    }
+
+    public function form(){
+
+
+      $data['csrf'] = array(
+        'name' => $this->security->get_csrf_token_name(),
+        'hash' => $this->security->get_csrf_hash()
+      );
+
+      $data['auth'] = $this->session->userdata('auth');
 
       $this->load->view('internal/form', $data);
-
     }
 
 
@@ -113,6 +175,9 @@ class Internal extends CI_Controller {
         'ans_i3002' => $this->input->post('ans_i3002'),
         'ans_i3003' => $this->input->post('ans_i3003'),
         'ans_i3004' => $this->input->post('ans_i3004'),
+        'uid' => $this->session->userdata('auth')['uid'],
+        'user_id' => $this->session->userdata('auth')['hrcode'],
+        'display_name' => $this->session->userdata('auth')['displayname'],
         'created_by_ip' => $client_ip
       );
 
@@ -143,17 +208,25 @@ class Internal extends CI_Controller {
         redirect('internal/');
       }
 
+
     }
 
 
     public function dashboard()
     {
-      $this->load->view('internal/dashboard');
+
+      $data["results"] = $this->db->query("select count(*) as count_all from qn_iit_form")->result();
+      $this->load->view('internal/dashboard',$data);
     }
 
     public function dashboard_source()
     {
 
+
+      $data['csrf'] = array(
+        'name' => $this->security->get_csrf_token_name(),
+        'hash' => $this->security->get_csrf_hash()
+      );
       $sql_avg = "SELECT
                       ROUND(AVG(val_i1),2) AS avg_i1,
                       ROUND(AVG(val_i2),2) AS avg_i2,

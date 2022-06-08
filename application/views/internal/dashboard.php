@@ -40,6 +40,12 @@
         </div>
     </div>
 
+        <div class="row">
+            <div class="alert alert-info col-sm-12 d-flex justify-content-center">
+              <h4>จำนวนผู้ตอบแบบสอบถาม <?= $results[0]->count_all; ?>&nbsp;รายการ</h4>
+            </div>
+        </div>
+
         <div class="row ">
 
               <div class="card col-sm-12 col-md-6">
@@ -126,6 +132,7 @@
           [csrfName] : csrfHash
         }
 
+        console.log(formData);
         $.ajax({
           url:  base_url + "internal/dashboard_source",
           type: 'POST',
